@@ -1,0 +1,20 @@
+{
+  "name": "vue-uri",
+  "version": "0.0.1",
+  "description": "Vue.js + URI.js URL constructor parser thing",
+  "author": "Benjamin Young",
+  "license": "Apache License 2.0",
+  "main": "src/main.js",
+  "dependencies": {
+    "vue": "~0.9.2",
+    "URIjs": "~1.13.2"
+  },
+  "devDependencies": {
+    "watchify": "~0.6.1",
+    "partialify": "~3.0.0",
+    "insert-css": "~0.1.1"
+  },
+  "scripts": {
+    "dev": "watchify -e src/main.js -t partialify -o dist/bundle.js"
+  }
+}

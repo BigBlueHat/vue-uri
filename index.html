@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js + URI.js</title>
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="semantic-ui/css/semantic.min.css" />
+    <style type="text/css">
+    body{font-family: 'Open Sans'}
+    </style>
+  </head>
+  <body>
+
+    <article class="ui one column page grid">
+      <section class="column">
+        <h1 class="ui header">
+          <a href="http://vuejs.org/" target="_blank">Vue.js</a>
+          +
+          <a href="http://medialize.github.io/URI.js/uri-template.html" target="_blank">URI.js</a>
+        </h1>
+        <div class="ui form">
+          <div class="field">
+            <label>URI Template -
+              <a href="http://tools.ietf.org/html/rfc6570" target="_blank">RFC 6570</a></label>
+            <div class="ui left labeled input">
+              <input type="text"
+                v-model="uritemplate" />
+            </div>
+          </div>
+          <div class="field">
+            <textarea
+              v-component="json-textarea"
+              v-with="content: obj"
+              v-on="change: parse"></textarea>
+          </div>
+          <div class="field">
+            <label>Result</label>
+            <div class="ui left labeled input">
+              <input v-model="output" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <a href="https://github.com/bigbluehat/vue-uri">
+      <img style="position: absolute; z-index: 1; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png">
+    </a>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
