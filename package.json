@@ -12,9 +12,11 @@
   "devDependencies": {
     "watchify": "~0.6.1",
     "partialify": "~3.0.0",
-    "insert-css": "~0.1.1"
+    "insert-css": "~0.1.1",
+    "mocha": "~1.20.0"
   },
   "scripts": {
-    "dev": "watchify -e src/main.js -t partialify -o dist/bundle.js"
+    "dev": "watchify -e src/main.js -t partialify -o dist/bundle.js",
+    "test": "mocha --ui bdd"
   }
 }
