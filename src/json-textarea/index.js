@@ -1,6 +1,4 @@
 module.exports = {
-  id: 'json-textarea',
-  template: '{{content}}',
   created: function() {
     this.$watch('content', function () {
       this.$el.value = JSON.stringify(this.content, null, 2);

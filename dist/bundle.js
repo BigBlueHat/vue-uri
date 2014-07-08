@@ -7378,8 +7378,6 @@ function query (el) {
 module.exports = ViewModel
 },{"./batcher":6,"./compiler":8,"./transition":26,"./utils":27}],29:[function(require,module,exports){
 module.exports = {
-  id: 'json-textarea',
-  template: '{{content}}',
   created: function() {
     this.$watch('content', function () {
       this.$el.value = JSON.stringify(this.content, null, 2);
