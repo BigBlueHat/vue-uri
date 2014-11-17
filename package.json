@@ -17,6 +17,7 @@
   },
   "scripts": {
     "dev": "watchify -e src/main.js -t partialify -o dist/bundle.js",
-    "test": "mocha --ui bdd"
+    "test": "mocha --ui bdd",
+    "test-browser": "browserify test/*.js --exclude test-bundle.js > test/test-bundle.js && open test/test.html"
   }
 }
