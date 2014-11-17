@@ -29,9 +29,7 @@
           </div>
           <div class="field">
             <textarea
-              v-component="json-textarea"
-              v-with="content: obj"
-              v-on="change: parse"></textarea>
+              v-model="obj | jsonify"></textarea>
           </div>
           <div class="field">
             <label>Result</label>

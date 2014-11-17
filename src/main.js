@@ -3,8 +3,15 @@ var URITemplate = require('URIjs/src/URITemplate')
 
 new Vue({
   el: 'body',
-  components: {
-    'json-textarea': require('./json-textarea')
+  filters: {
+    jsonify: {
+      read: function(v) {
+        return JSON.stringify(v, null, 2);
+      },
+      write: function(v) {
+        return JSON.parse(v);
+      }
+    }
   },
   data: {
     uritemplate: 'http://example.org/~{username}/{term:1}/{term}{?q*,lang}',
