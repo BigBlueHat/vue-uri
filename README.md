@@ -14,5 +14,5 @@ To start watch and auto rebuild with `watchify`, just run `npm run dev`.
 
 ## Testing
 
-`npm run test` will use [mocha](http://visionmedia.github.io/mocha/) to run
+`npm run test` will use [mocha](http://mochajs.org/) to run
 the tests.
